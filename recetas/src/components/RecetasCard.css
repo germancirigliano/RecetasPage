@@ -1,0 +1,19 @@
+.recetasCard{
+    list-style: none;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.recetasImage{
+    border-radius: 10px;
+    background-color: azure;
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width:560px){
+    .recetasImage{
+        width: 90%;
+        height: auto;
+    }
+}
