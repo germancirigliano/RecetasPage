@@ -17,10 +17,10 @@ import { AuthContext } from "./context/AuthContext"
 
 export const App = () =>{
 
-  // const {currentUser} = useContext(AuthContext);
-  // const RequireAuth = ({children}) =>{
-  //   return currentUser?children:<Navigate to="/login"/>
-  // }
+  const {currentUser} = useContext(AuthContext);
+  const RequireAuth = ({children}) =>{
+    return currentUser?children:<Navigate to="/login"/>
+  }
 
   return(
     <BrowserRouter>
@@ -32,9 +32,9 @@ export const App = () =>{
         <Route path="/login" element = {<Login/>}/>
         <Route path="/register" element = {<Register/>}/>
         <Route path="/receta/:recetaId" element = {<DetalleRecetas/>}/>
-        <Route path="/admin" element={ <Show/> }/>
-        <Route path="/admin/create" element={<Create/>}/>
-        <Route path="/admin/edit/:recetaId" element={<Edit/>}/>
+        <Route path="/admin" element={<RequireAuth> <Show/> </RequireAuth>}/>
+        <Route path="/admin/create" element={<RequireAuth><Create/></RequireAuth>}/>
+        <Route path="/admin/edit/:recetaId" element={<RequireAuth><Edit/></RequireAuth>}/>
         <Route path="/admin/detail/:recetaId" element={<DetalleRecetas/>}/>
       </Routes>
     </BrowserRouter>

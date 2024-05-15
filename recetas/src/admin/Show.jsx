@@ -1,5 +1,5 @@
 import { useState,useEffect } from 'react';
-import {Link} from 'react-router-dom';
+import {Link,useNavigate} from 'react-router-dom';
 import {collection, getDocs,  deleteDoc, doc} from 'firebase/firestore';
 import {db} from '../firebaseConfig/firebase';
 
@@ -8,6 +8,14 @@ import withReactContent from 'sweetalert2-react-content';
 const mySwal = withReactContent(Swal);
 
 export const  Show = () => {
+
+    const navigate = useNavigate();
+    const limpiarStorage = () => {
+        localStorage.clear()
+        navigate("../")
+
+    }
+
     //1 configurar useState (HOOK)
     const [recetas,setRecetas] = useState([]);
     
@@ -62,7 +70,10 @@ export const  Show = () => {
 
     return (
         <>
-            <div className="container">
+        <div className="container">
+                <div className="d-flex justify-content-end">
+                <button className="btn btn-primary" type='button' onClick={limpiarStorage}>SALIR</button>
+                </div>
                 <div className="col">
                     <div className="row">
                         <div className="d-grid gap-2">
@@ -118,7 +129,7 @@ export const  Show = () => {
                         </table>
                     </div>
                 </div>
-            </div>
+        </div>
         </>
     )
 }

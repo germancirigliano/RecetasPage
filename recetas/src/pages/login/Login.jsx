@@ -21,7 +21,7 @@ const {dispatch} = useContext(AuthContext)
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
-        // dispatch({type:"LOGIN",payload:user})
+        dispatch({type:"LOGIN",payload:user})
         navitage("/admin")
       })
       .catch((error) => {
