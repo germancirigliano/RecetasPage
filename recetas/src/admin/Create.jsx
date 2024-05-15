@@ -136,7 +136,7 @@ const store = async(e) => {
                 <button type='button' onClick={()=>removerInstruccion(index)}>Eliminar</button>
               </div>
                 ))}
-                <button type='button' className='btn btn-secondary' onClick={handleAddInputIns}>Agregar ingrediente</button>
+                <button type='button' className='btn btn-secondary' onClick={handleAddInputIns}>Agregar Instruccion</button>
               </label>
             </div>
             <div className="mb-3">
