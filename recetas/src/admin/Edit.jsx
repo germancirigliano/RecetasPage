@@ -2,6 +2,7 @@ import {useEffect,useState} from 'react'
 import {useNavigate, useParams, Link} from 'react-router-dom'
 import {getDoc, updateDoc,doc} from 'firebase/firestore'
 import {db} from '../firebaseConfig/firebase'
+import { getDownloadURL, uploadBytes } from 'firebase/storage'
 
 export const Edit = () => {
 
@@ -39,8 +40,7 @@ export const Edit = () => {
       setTiempo_preparacion(receta.data().tiempo_preparacion)
       setIngredientes(receta.data().ingredientes)
       setInstrucciones(receta.data().instrucciones)
-      setImagen(receta.data().imagen)
-      
+      setImagen((receta.data().imagen))
     }
     else { //aca un swal
       console.log("receta NO existe");
