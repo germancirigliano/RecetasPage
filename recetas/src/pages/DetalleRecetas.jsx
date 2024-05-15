@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
-import {Link} from "react-router-dom"
-import {collection, getDocs, deleteDoc, doc, getDoc} from "firebase/firestore"
+import { doc, getDoc} from "firebase/firestore"
 import {db} from "../firebaseConfig/firebase.js"
-import "./DetalleRecetas.css"
+import "../css/DetalleRecetas.css"
 
 export const DetalleRecetas = () => {
     const [receta, setReceta] = useState(null);
@@ -38,7 +37,9 @@ export const DetalleRecetas = () => {
                     </div>
                     <div className="imageContainer">
                         <picture className="itemPicture">
-                            <img src={imgURL} alt={receta.nombre} className="col itemImage" />
+                        
+                        <img src={!receta.imagen.startsWith("https://www.example.com/")?receta.imagen:imgURL} alt={receta.imagen} className="col itemImage" />
+                            {/*<img src={imgURL} alt={receta.nombre} className="col itemImage" />*/}
                         </picture>
                     </div>
                 </div>

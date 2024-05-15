@@ -1,0 +1,6 @@
+.recetas {
+    display: flex;
+    gap: 2rem;
+    font-family: 'Inter', sans-serif;
+    max-width: 1250px;
+}

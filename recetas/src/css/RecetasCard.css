@@ -1,3 +1,10 @@
+.recetaImage__Container{
+    display: block;
+    width: 100% !important;
+    height: 200px;
+    overflow: hidden;
+}
+
 .recetasCard{
     list-style: none;
     text-transform: uppercase;
@@ -8,7 +15,9 @@
     border-radius: 10px;
     background-color: azure;
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 @media (max-width:560px){

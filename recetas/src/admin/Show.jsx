@@ -2,6 +2,7 @@ import { useState,useEffect } from 'react';
 import {Link} from 'react-router-dom';
 import {collection, getDocs,  deleteDoc, doc} from 'firebase/firestore';
 import {db} from '../firebaseConfig/firebase';
+import "../css/Show.css"
 
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
@@ -16,9 +17,6 @@ export const  Show = () => {
     
     //3 fn para mostrar todos los documentos (getDOCS)
     // va adentro de use effecta para que se actualice solo
-    
-
-    
     // 4 fn para elimina un doc
     const deleteReceta = async (id) =>{
         const recetaDoc=doc(db,"recetas",id) //heroescollection
@@ -26,7 +24,7 @@ export const  Show = () => {
     }
     // 5 FN para la confirmacion de SweetAlert
     const confirmDelete = (id) => {
-        Swal.fire({
+        mySwal.fire({
             title: "Esta Seguro?",
             text: "Esto no tiene vuelta atras!",
             icon: "warning",
@@ -65,7 +63,7 @@ export const  Show = () => {
             <div className="container">
                 <div className="col">
                     <div className="row">
-                        <div className="d-grid gap-2">
+                        <div className="d-grid gap-2" id='create__container'>
                         <Link to="create" className="btn btn-secondary mt-2 mb-2">
                             {" "}
                             <i className="fa-solid fa-plus"></i>
@@ -73,6 +71,7 @@ export const  Show = () => {
                         </Link>
                         </div>
 
+                        {/*<table className="table  table-hover table-success table-striped">*/}
                         <table className="table table-dark table-hover">
                         <thead>
                             <tr>
@@ -80,6 +79,8 @@ export const  Show = () => {
                                 <td>Categoria</td>
                                 <td>Dificultad</td>
                                 <td>Tiempo Preparacion</td>
+                                {/* <th>Ingredientes</th>
+                                <th>Instrucciones</th> */}
                                 <td>imagen</td>
                                 <td>Acciones</td>
                             </tr>
@@ -92,8 +93,12 @@ export const  Show = () => {
                                 <td>{receta.categoria}</td>
                                 <td>{receta.dificultad}</td>
                                 <td>{receta.tiempo_preparacion}</td>
-                                <td>{receta.imagen}</td>
+                                {/* <td className='col-2'>{receta.ingredientes}</td>
+                                <td className='col-2'>{receta.instrucciones}</td> */}
                                 <td>
+                                    <img src={receta.imagen} alt={receta.nombre} className='col-4 img-fluid img-thumbnail'/>
+                                </td>
+                                <td className='col-2'>
                                 <Link to={`detail/${receta.id}`} className="btn btn-light">
                                     <i className="fa-solid fa-eye"></i>
                                 </Link>
