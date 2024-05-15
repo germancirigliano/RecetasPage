@@ -16,6 +16,11 @@ export const Edit = () => {
   const navigate = useNavigate()
   const {recetaId} = useParams()
 
+  const limpiarStorage = () => {
+      localStorage.clear()
+      navigate("../")
+    }
+
   const update = async(e) => {
     e.preventDefault();
     const receta = doc(db,"recetas",`${recetaId}`)
@@ -49,6 +54,9 @@ export const Edit = () => {
 
   return (
     <div className='container mb'>
+      <div className="d-flex justify-content-end">
+          <button className="btn btn-primary" type='button' onClick={limpiarStorage}>LOGOUT</button>
+      </div>
       <div className="row">
         <div className="col">
           <h1>edit Receta</h1>

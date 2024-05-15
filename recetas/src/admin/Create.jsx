@@ -16,6 +16,11 @@ const [instrucciones,setInstrucciones] = useState([''])
  
  const navigate = useNavigate();
 
+  const limpiarStorage = () => {
+      localStorage.clear()
+      navigate("../")
+    }
+
  const handleChangeIng = (index,value) =>{
   const nuevosIngredientes = [...ingredientes];
   nuevosIngredientes[index] = value;
@@ -85,6 +90,9 @@ const store = async(e) => {
   return (
     <>
       <div className="container mb">
+        <div className="d-flex justify-content-end">
+          <button className="btn btn-primary" type='button' onClick={limpiarStorage}>LOGOUT</button>
+        </div>
         <div className='row'>
           <div className='col'>
             <h1>Nueva Receta</h1>

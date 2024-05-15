@@ -23,7 +23,10 @@ export const DetalleRecetas = () => {
         return null
     }
     return(
-
+        <>
+        <Link className="d-flex justify-content-end mb-5" to="/admin">
+            <button className="btn btn-primary" type='button'>ADMIN</button>
+        </Link>
         <div className="contenedorDetalle">
             <div className="container">
                 <div className="contenedorHero">
@@ -75,5 +78,6 @@ export const DetalleRecetas = () => {
                 </div>
             </div>
         </div>
+        </>
     )
 }
