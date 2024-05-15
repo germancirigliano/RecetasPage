@@ -2,7 +2,7 @@ import { useState } from "react"
 import "./login.css"
 import {auth} from '../../firebaseConfig/firebase'
 import {signInWithEmailAndPassword} from 'firebase/auth'
-import { useNavigate } from "react-router-dom"
+import { useNavigate,Link } from "react-router-dom"
 
 // export const Login = () => {
 
@@ -60,8 +60,10 @@ export const Login = () => {
   };
 
   return (
+    <>
     <div className="login">
       <form onSubmit={handleLogin}>
+      <h1>ACCEDER A SU CUENTA</h1>
         <input
           type="email"
           placeholder="email"
@@ -74,7 +76,11 @@ export const Login = () => {
         />
         <button type="submit">Acceder</button>
         {error && <span>Email o contraseña incorrectos!</span>}
+        <Link to="../register">
+          <p>Registrarse</p>
+        </Link>
       </form>
     </div>
+    </>
   );
 };

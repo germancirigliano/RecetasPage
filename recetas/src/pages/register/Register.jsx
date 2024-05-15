@@ -1,7 +1,7 @@
 import { useState } from "react"
 import "./register.css"
 import {auth} from '../../firebaseConfig/firebase'
-import {signInWithEmailAndPassword} from 'firebase/auth'
+import {createUserWithEmailAndPassword} from 'firebase/auth'
 import { useNavigate } from "react-router-dom"
 
 //SIN TERMINAR
@@ -17,11 +17,11 @@ export const Register = () => {
   const handleLogin = (e) => {
     e.preventDefault();
 
-    signInWithEmailAndPassword(auth, email, password)
+    createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
-        navitage("/admin")
+        navitage("/login")
       })
       .catch((error) => {
         setError(true);
@@ -29,7 +29,8 @@ export const Register = () => {
   };
 
   return (
-    <div className="login">
+    <div className="register">
+      <h1 >REGISTRAR USUARIO</h1>
       <form onSubmit={handleLogin}>
         <input
           type="email"
@@ -41,8 +42,7 @@ export const Register = () => {
           placeholder="contraseña"
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button type="submit">Acceder</button>
-        {error && <span>Email o contraseña incorrectos!</span>}
+        <button type="submit">Registrarse</button>
       </form>
     </div>
   );
