@@ -18,7 +18,7 @@ const [instrucciones,setInstrucciones] = useState([''])
 
   const limpiarStorage = () => {
       localStorage.clear()
-      navigate("../")
+      window.location.assign('/')
     }
 
  const handleChangeIng = (index,value) =>{

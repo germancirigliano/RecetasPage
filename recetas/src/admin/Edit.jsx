@@ -18,7 +18,7 @@ export const Edit = () => {
 
   const limpiarStorage = () => {
       localStorage.clear()
-      navigate("../")
+      window.location.assign('/')
     }
 
   const update = async(e) => {

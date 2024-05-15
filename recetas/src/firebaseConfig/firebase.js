@@ -8,13 +8,19 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBZEGS5K38hILaRKY8t_JMVuL_5mmQLB80",
-  authDomain: "crud-cac-tpintegrador.firebaseapp.com",
-  projectId: "crud-cac-tpintegrador",
-  storageBucket: "crud-cac-tpintegrador.appspot.com",
-  messagingSenderId: "218299972993",
-  appId: "1:218299972993:web:af82bb6ffd9ee59f4ffc80",
-  measurementId: "G-B8S6M0VF6J"
+  // apiKey: "AIzaSyBZEGS5K38hILaRKY8t_JMVuL_5mmQLB80",
+  // authDomain: "crud-cac-tpintegrador.firebaseapp.com",
+  // projectId: "crud-cac-tpintegrador",
+  // storageBucket: "crud-cac-tpintegrador.appspot.com",
+  // messagingSenderId: "218299972993",
+  // appId: "1:218299972993:web:af82bb6ffd9ee59f4ffc80",
+  // measurementId: "G-B8S6M0VF6J"
+  apiKey: "AIzaSyDzY2EbSRhFvLRMWP1K1Fl-nDZhJPJ7jlk",
+  authDomain: "recetas-project.firebaseapp.com",
+  projectId: "recetas-project",
+  storageBucket: "recetas-project.appspot.com",
+  messagingSenderId: "510486745064",
+  appId: "1:510486745064:web:68105631c520f9702dde5d"
 };
 
 // Initialize Firebase

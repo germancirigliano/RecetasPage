@@ -10,11 +10,9 @@ const mySwal = withReactContent(Swal);
 
 export const  Show = () => {
 
-    const navigate = useNavigate();
     const limpiarStorage = () => {
         localStorage.clear()
-        navigate("../")
-
+        window.location.assign('/')
     }
 
     //1 configurar useState (HOOK)
