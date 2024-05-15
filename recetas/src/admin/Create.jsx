@@ -145,7 +145,7 @@ const store = async(e) => {
             </div>
             <button className='btn btn-primary' type='submit'>AÑADIR RECETA</button>
             <Link to="../admin" >
-            <button className="btn btn-secondary mt-2 mb-2">CANCELAR</button>
+            <button className="btn btn-secondary mt-2 mb-2 bg-danger m-2">CANCELAR</button>
             </Link>
             </form>
           </div>

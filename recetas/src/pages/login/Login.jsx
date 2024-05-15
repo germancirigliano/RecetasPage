@@ -1,41 +1,9 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
 import "./login.css"
 import {auth} from '../../firebaseConfig/firebase'
 import {signInWithEmailAndPassword} from 'firebase/auth'
 import { useNavigate,Link } from "react-router-dom"
-
-// export const Login = () => {
-
-//   const [error, setError] = useState(false);
-//   const [email,setEmail] = useState('')
-//   const [password,setPassword] = useState('')
-
-//   const navigate = useNavigate()
-
-// const handleLogin = (e) => {
-//     e.preventDefault();
-// }
-//   signInWithEmailAndPassword(auth,email,password)
-//   .then((userCredential)=>{
-//     const user = userCredential.user;
-//     console.log(user);
-//     navigate("/admin")
-//     })
-//   .catch((e)=>{
-//     setError(true);
-//   })
-
-//   return (
-//     <div className="login">
-//       <form onSubmit={handleLogin}>
-//         <input type="email" placeholder="email" onChange={(e)=>setEmail(e.target.value)}/>
-//         <input type="password" placeholder="password" onChange={(e)=>setPassword(e.target.value)}/>
-//         <button type="">Login</button>
-//         {error && <span></span>}
-//       </form>
-//     </div>
-//   )
-// }
+import { AuthContext } from "../../context/AuthContext"
 
 export const Login = () => {
   const [error, setError] = useState(false);
@@ -44,6 +12,7 @@ export const Login = () => {
 
   const navitage = useNavigate()
 
+const {dispatch} = useContext(AuthContext)
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -52,6 +21,7 @@ export const Login = () => {
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
+        // dispatch({type:"LOGIN",payload:user})
         navitage("/admin")
       })
       .catch((error) => {
