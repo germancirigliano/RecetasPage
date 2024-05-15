@@ -1,5 +1,5 @@
 import {useEffect,useState} from 'react'
-import {useNavigate, useParams} from 'react-router-dom'
+import {useNavigate, useParams, Link} from 'react-router-dom'
 import {getDoc, updateDoc,doc} from 'firebase/firestore'
 import {db} from '../firebaseConfig/firebase'
 
@@ -24,8 +24,8 @@ export const Edit = () => {
     navigate('/admin')
   }
 
-  const getRecetabyID = async (id)=>{
-    const receta = await getDoc(doc(db,"recetas",id));
+  const getRecetabyID = async (recetaId)=>{
+    const receta = await getDoc(doc(db,"recetas",recetaId));
     if(receta.exists()){
       //console.log(receta.data());
       setNombre(receta.data().nombre)
@@ -88,12 +88,32 @@ export const Edit = () => {
             
             <div className="mb-3">
               <label htmlFor="ingredientes" className="form-label">Ingredientes</label>
-              <input name='ingredientes' value={ingredientes} onChange={(e)=> setIngredientes(e.target.value)} type="text" className='form-control' />
+              {ingredientes.map((ingrediente,index)=> (
+               <input key={index}
+                value={ingrediente} 
+                onChange={(e)=> {
+                  const nuevosIngredientes =[...ingredientes];
+                  nuevosIngredientes[index] = e.target.value;
+                  setIngredientes(nuevosIngredientes)
+                  }} 
+                type="text" 
+                className='form-control' 
+                />
+              ))}
             </div>
 
             <div className="mb-3">
               <label htmlFor="instrucciones" className="form-label">Instrucciones</label>
-              <input name='instrucciones' value={instrucciones} onChange={(e)=> setInstrucciones(e.target.value)} type="text" className='form-control' />
+              { instrucciones.map((instruccion,index)=>(
+                   <input key={index}
+                    value={instruccion} 
+                    onChange={(e)=> {
+                      const nuevasIntruciones=[...instrucciones];
+                      nuevasIntruciones[index]=e.target.value;
+                      setInstrucciones(nuevasIntruciones)}} 
+                    type="text" 
+                    className='form-control' /> 
+              )) }
             </div>
             
             <div className="mb-3">
@@ -102,7 +122,11 @@ export const Edit = () => {
             </div>
 
             <button type='submit' className='btn btn-primary'>Update</button>
-
+            <Link to='/admin'>
+              <button className='btn btn-danger'>
+                Cancelar
+              </button>
+            </Link>
           </form>
         </div>
       </div>

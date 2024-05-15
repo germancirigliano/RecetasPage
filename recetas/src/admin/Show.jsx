@@ -34,7 +34,7 @@ export const  Show = () => {
     }
     // 5 FN para la confirmacion de SweetAlert
     const confirmDelete = (id) => {
-        Swal.fire({
+        mySwal.fire({
             title: "Esta Seguro?",
             text: "Esto no tiene vuelta atras!",
             icon: "warning",
@@ -84,31 +84,33 @@ export const  Show = () => {
                         </Link>
                         </div>
 
-                        <table className="table table-dark table-hover">
+                        <table className="table  table-hover table-success table-striped">
                         <thead>
                             <tr>
-                                <td>Nombre</td>
-                                <td>Categoria</td>
-                                <td>Dificultad</td>
-                                <td>Tiempo Preparacion</td>
-                                <td>Ingredientes</td>
-                                <td>Instrucciones</td>
-                                <td>imagen</td>
-                                <td>Acciones</td>
+                                <th>Nombre</th>
+                                <th>Categoria</th>
+                                <th>Dificultad</th>
+                                <th>Tiempo Preparacion</th>
+                                {/* <th>Ingredientes</th>
+                                <th>Instrucciones</th> */}
+                                <th>imagen</th>
+                                <th>Acciones</th>
                             </tr>
                         </thead>
 
                         <tbody>
                             {recetas.map((receta) => (
                             <tr key={receta.id}>
-                                <td>{receta.nombre}</td>
-                                <td>{receta.categoria}</td>
-                                <td>{receta.dificultad}</td>
-                                <td>{receta.tiempo_preparacion}</td>
-                                <td>{receta.ingredientes}</td>
-                                <td>{receta.instrucciones}</td>
-                                <td>{receta.imagen}</td>
+                                <td className='col-2'>{receta.nombre}</td>
+                                <td className='col-2'>{receta.categoria}</td>
+                                <td className='col-2'>{receta.dificultad}</td>
+                                <td className='col-2'>{receta.tiempo_preparacion}</td>
+                                {/* <td className='col-2'>{receta.ingredientes}</td>
+                                <td className='col-2'>{receta.instrucciones}</td> */}
                                 <td>
+                                    <img src={receta.imagen} alt={receta.nombre} className='col-4 img-fluid img-thumbnail'/>
+                                </td>
+                                <td className='col-2'>
                                 <Link to={`detail/${receta.id}`} className="btn btn-light">
                                     <i className="fa-solid fa-eye"></i>
                                 </Link>
