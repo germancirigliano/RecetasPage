@@ -80,6 +80,8 @@ export const  Show = () => {
                                 <td>Categoria</td>
                                 <td>Dificultad</td>
                                 <td>Tiempo Preparacion</td>
+                                <td>Ingredientes</td>
+                                <td>Instrucciones</td>
                                 <td>imagen</td>
                                 <td>Acciones</td>
                             </tr>
@@ -92,6 +94,8 @@ export const  Show = () => {
                                 <td>{receta.categoria}</td>
                                 <td>{receta.dificultad}</td>
                                 <td>{receta.tiempo_preparacion}</td>
+                                <td>{receta.ingredientes}</td>
+                                <td>{receta.instrucciones}</td>
                                 <td>{receta.imagen}</td>
                                 <td>
                                 <Link to={`detail/${receta.id}`} className="btn btn-light">

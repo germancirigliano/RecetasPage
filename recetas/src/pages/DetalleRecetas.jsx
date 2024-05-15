@@ -10,7 +10,7 @@ export const DetalleRecetas = () => {
     const {recetaId} = useParams();
 
     /*const imgURL = `https://image.tmdb.org/t/p/w300${pelicula.poster_path}`;*/
-    const imgURL = `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk_A0Pqz4xO2S-N7mk7BtTUhmtgxNsRKaIe6NtS8yFTg&s`;
+    // const imgURL = `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk_A0Pqz4xO2S-N7mk7BtTUhmtgxNsRKaIe6NtS8yFTg&s`;
     
     useEffect(()=>{
         const getReceta = async() => {
@@ -38,7 +38,7 @@ export const DetalleRecetas = () => {
                     </div>
                     <div className="imageContainer">
                         <picture className="itemPicture">
-                            <img src={imgURL} alt={receta.nombre} className="col itemImage" />
+                            <img src={receta.imagen} alt={receta.imagen} className="col itemImage" />
                         </picture>
                     </div>
                 </div>

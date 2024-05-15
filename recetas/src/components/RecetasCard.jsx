@@ -6,7 +6,7 @@ export const RecetasCard = ({recetaMap})=>{
     return(
         <li className="recetasCard">
             <Link to={`/receta/${recetaMap.id}`}>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk_A0Pqz4xO2S-N7mk7BtTUhmtgxNsRKaIe6NtS8yFTg&s" alt={recetaMap.nombre} className="recetasImage" />
+                <img src={recetaMap.imagen} alt={recetaMap.imagen} className="recetasImage" />
                 <small>{recetaMap.nombre}</small>
             </Link>
         </li>
