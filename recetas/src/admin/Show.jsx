@@ -66,6 +66,9 @@ export const  Show = () => {
 
     return (
         <>
+                <div className="d-flex justify-content-end">
+                <button className="btn btn-primary" type='button' onClick={limpiarStorage}>LOGOUT</button>
+                </div>
             <div className="container">
                 <div className="d-flex justify-content-end">
                 <button className="btn btn-primary" type='button' onClick={limpiarStorage}>LOGOUT</button>

@@ -1,9 +1,11 @@
 .title{
+  display: block;
   color:#323232;
   text-align: center;
   font-size: 3rem;
   font-family: Georgia, 'Times New Roman', Times, serif;
   padding: 1em;
+  text-decoration: none;
 }
 
 body{

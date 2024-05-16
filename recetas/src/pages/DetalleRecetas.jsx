@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { useParams,Link } from "react-router-dom"
+import { useParams, Link } from "react-router-dom"
 import { doc, getDoc} from "firebase/firestore"
 import {db} from "../firebaseConfig/firebase.js"
 import "../css/DetalleRecetas.css"
@@ -24,7 +24,7 @@ export const DetalleRecetas = () => {
     }
     return(
         <>
-        <Link className="d-flex justify-content-end mb-5" to="/admin">
+        <Link className="d-flex justify-content-end" to="/admin">
             <button className="btn btn-primary" type='button'>ADMIN</button>
         </Link>
         <div className="contenedorDetalle">
