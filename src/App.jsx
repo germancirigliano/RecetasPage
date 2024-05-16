@@ -33,6 +33,7 @@ export const App = () =>{
         <Route path="/admin/create" element={<RequireAuth><Create/></RequireAuth>}/>
         <Route path="/admin/edit/:recetaId" element={<RequireAuth><Edit/></RequireAuth>}/>
         <Route path="/admin/detail/:recetaId" element={<DetalleRecetas/>}/>
+        <Route path="/RecetasPages/" element={<Navigate to="/"/>}/>
       </Routes>
     </BrowserRouter>
   )
