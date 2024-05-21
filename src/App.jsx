@@ -25,15 +25,14 @@ export const App = () =>{
         <Link to="/" className="title">RECETAS</Link>
       </header>
       <Routes>
-        <Route path="/" element = {<LandingPage/>}/>
-        <Route path="/receta/:recetaId" element = {<DetalleRecetas/>}/>
-        <Route path="/login" element = {<Login/>}/>
-        <Route path="/register" element = {<Register/>}/>
-        <Route path="/admin" element={<RequireAuth> <Show/> </RequireAuth>}/>
-        <Route path="/admin/create" element={<RequireAuth><Create/></RequireAuth>}/>
-        <Route path="/admin/edit/:recetaId" element={<RequireAuth><Edit/></RequireAuth>}/>
-        <Route path="/admin/detail/:recetaId" element={<DetalleRecetas/>}/>
-        <Route path="/RecetasPage/" element={<Navigate to="/"/>}/>
+        <Route path="/RecetasPage/" element = {<LandingPage/>}/>
+        <Route path="/RecetasPage/receta/:recetaId" element = {<DetalleRecetas/>}/>
+        <Route path="/RecetasPage/login" element = {<Login/>}/>
+        <Route path="/RecetasPage/register" element = {<Register/>}/>
+        <Route path="/RecetasPage/admin" element={<RequireAuth> <Show/> </RequireAuth>}/>
+        <Route path="/RecetasPage/admin/create" element={<RequireAuth><Create/></RequireAuth>}/>
+        <Route path="/RecetasPage/admin/edit/:recetaId" element={<RequireAuth><Edit/></RequireAuth>}/>
+        <Route path="/RecetasPage/admin/detail/:recetaId" element={<DetalleRecetas/>}/>
       </Routes>
     </BrowserRouter>
   )
