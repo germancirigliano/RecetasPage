@@ -1,0 +1,36 @@
+.recetaImage__Container{
+    display: block;
+    width: 100% !important;
+    height: 200px;
+    overflow: hidden;
+}
+
+.recetasCard{
+    list-style: none;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.recetasImage{
+    border-radius: 10px;
+    background-color: azure;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.recetasCard__Link{
+    text-decoration: none !important;
+    color: #323232;
+    font-weight: 700;
+}
+.recetasCard__name{
+    font-family: 'Inter', sans-serif;
+}
+
+@media (max-width:560px){
+    .recetasImage{
+        width: 90%;
+        height: auto;
+    }
+}

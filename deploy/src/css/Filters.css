@@ -1,0 +1,30 @@
+.recetas__filters{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.filters__title {
+    color: #163d30;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.5em;
+}
+
+.filters__search, .filters__time, .filters__difficulty, .filters__category{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+#search, #time, #difficulty, #category{
+    border: 1px solid #64b897;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5em;
+    padding: 8px;
+    width: 100%;
+    transition: all .3s;
+}
