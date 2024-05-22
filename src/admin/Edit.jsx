@@ -3,6 +3,9 @@ import {useNavigate, useParams, Link} from 'react-router-dom'
 import {getDoc, updateDoc,doc} from 'firebase/firestore'
 import {db} from '../firebaseConfig/firebase'
 import { getDownloadURL, uploadBytes } from 'firebase/storage'
+import { Navbar } from "../components/Navbar";
+import { Hero } from "../components/Hero";
+import { Footer } from "../components/Footer";
 
 export const Edit = () => {
 
@@ -53,14 +56,16 @@ export const Edit = () => {
   // const recetas=collection(db,"recetas")
 
   return (
+    <>
+    <Navbar/>
+    <Hero/> 
     <div className='container mb'>
       <div className="d-flex justify-content-end">
           <button className="btn btn-primary" type='button' onClick={limpiarStorage}>LOGOUT</button>
       </div>
       <div className="row">
         <div className="col">
-          <h1>edit Receta</h1>
-
+          
           <form onSubmit={update} >
 
             <div className="mb-3">
@@ -132,5 +137,7 @@ export const Edit = () => {
         </div>
       </div>
     </div>
+    <Footer/>S
+    </>
   )
 }

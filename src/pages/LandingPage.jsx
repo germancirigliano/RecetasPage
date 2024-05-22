@@ -1,19 +1,21 @@
 import { RecetasGrid } from "../components/RecetasGrid"
 import { Filters } from "../components/Filters"
 import "../css/LandingPage.css"
-import { Link } from "react-router-dom"
+import { Navbar } from "../components/Navbar";
+import { Hero } from "../components/Hero";
+import { Footer } from "../components/Footer";
+import { RecetasNuevas } from "../components/RecetasNuevas"
 
 export const LandingPage = () => {
-    
     return(
         <>
-            <Link className="d-flex justify-content-end" to="/admin">
-                <button className="btn btn-primary" type='button'>ADMIN</button>
-            </Link>
+            <Navbar/>
+            <Hero/>  
             <div className="container recetas">
                 <Filters/>
-                <RecetasGrid/>
+                <RecetasGrid/> 
             </div>
+            <Footer/>
         </>
     )
 }

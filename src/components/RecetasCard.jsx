@@ -13,11 +13,4 @@ export const RecetasCard = ({recetaMap})=>{
             </Link>
         </li>
     )
-    {/*<li className="peliculasCard">
-    <Link to={`/pelicula/${peliculaMap.id}`}>
-    <img className="peliculasImage" src={imgURL} alt="IMG"/>
-    <small>{peliculaMap.title}</small>
-    </Link>
-    </li>*/}
 }
-/*https://www.example.com/tortilla-patatas.jpg*/

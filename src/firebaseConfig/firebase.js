@@ -17,12 +17,18 @@ import { getAuth } from "firebase/auth";
   measurementId: "G-B8S6M0VF6J"
 };*/
 const firebaseConfig = {
-  apiKey: "AIzaSyDzY2EbSRhFvLRMWP1K1Fl-nDZhJPJ7jlk",
-  authDomain: "recetas-project.firebaseapp.com",
-  projectId: "recetas-project",
-  storageBucket: "recetas-project.appspot.com",
-  messagingSenderId: "510486745064",
-  appId: "1:510486745064:web:68105631c520f9702dde5d"
+  // apiKey: "AIzaSyDzY2EbSRhFvLRMWP1K1Fl-nDZhJPJ7jlk",
+  // authDomain: "recetas-project.firebaseapp.com",
+  // projectId: "recetas-project",
+  // storageBucket: "recetas-project.appspot.com",
+  // messagingSenderId: "510486745064",
+  // appId: "1:510486745064:web:68105631c520f9702dde5d"
+  apiKey: "AIzaSyAIW9_jrJzonuv9JBzDQNOBqA9uJa75vz4",
+  authDomain: "cac-crud-react-firebase.firebaseapp.com",
+  projectId: "cac-crud-react-firebase",
+  storageBucket: "cac-crud-react-firebase.appspot.com",
+  messagingSenderId: "165114634839",
+  appId: "1:165114634839:web:41916ba16e509588bb7912"
 };
 
 // Initialize Firebase

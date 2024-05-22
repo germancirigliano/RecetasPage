@@ -1,0 +1,20 @@
+
+.navbar__logo{
+    max-width:  300px; ;
+    height: 100%;
+}
+
+.navbar__link{
+    font: var(--secundary-font);
+    font-size: var(--font-medium);
+    color: var(--light-font-color);
+    padding: var(--spacing-8) var(--spacing-8);
+    display: inline-block;
+    transition: background .3s ease-in-out;
+    position: relative;
+    text-decoration: none;
+}
+.navbar__link:hover{
+    background-color: #1d84b5;
+}
+

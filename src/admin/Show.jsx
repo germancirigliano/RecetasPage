@@ -3,12 +3,15 @@ import {Link,useNavigate} from 'react-router-dom';
 import {collection, getDocs,  deleteDoc, doc} from 'firebase/firestore';
 import {db} from '../firebaseConfig/firebase';
 import "../css/Show.css"
-
+import { NavbarAdmin } from "./../components/NavbarAdmin";
+import { HeroAdmin } from "./../components/HeroAdmin";
+import { FooterAdmin } from "./../components/FooterAdmin";
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
+
 const mySwal = withReactContent(Swal);
 
-export const  Show = () => {
+export const Show = () => {
 
     const limpiarStorage = () => {
         localStorage.clear()
@@ -66,9 +69,8 @@ export const  Show = () => {
 
     return (
         <>
-                <div className="d-flex justify-content-end">
-                <button className="btn btn-primary" type='button' onClick={limpiarStorage}>LOGOUT</button>
-                </div>
+            <NavbarAdmin/>
+            <HeroAdmin/> 
             <div className="container">
                 <div className="d-flex justify-content-end">
                 <button className="btn btn-primary" type='button' onClick={limpiarStorage}>LOGOUT</button>
@@ -132,6 +134,7 @@ export const  Show = () => {
                     </div>
                 </div>
             </div>
+            <FooterAdmin/>
         </>
     )
 }
