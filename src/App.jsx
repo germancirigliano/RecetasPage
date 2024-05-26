@@ -8,6 +8,8 @@ import { Create } from "./admin/Create"
 import { Edit } from "./admin/Edit"
 import { useContext } from "react"
 import { AuthContext } from "./context/AuthContext"
+import { Navbar } from "./components/Navbar"
+import {Recetas} from "./pages/Recetas"
 
 
 import"./App.css"
@@ -22,10 +24,12 @@ export const App = () =>{
   return(
     <BrowserRouter>
       <header>
-        <Link to="/" className="title">RECETAS</Link>
+        <Navbar/>
+        {/*<Link to="/" className="title">RECETAS</Link>*/}
       </header>
       <Routes>
         <Route path="/" element = {<LandingPage/>}/>
+        <Route path="/recetas" element = {<Recetas/>}/>
         <Route path="/receta/:recetaId" element = {<DetalleRecetas/>}/>
         <Route path="/login" element = {<Login/>}/>
         <Route path="/register" element = {<Register/>}/>

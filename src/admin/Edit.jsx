@@ -2,9 +2,6 @@ import {useEffect,useState} from 'react'
 import {useNavigate, useParams, Link} from 'react-router-dom'
 import {getDoc, updateDoc,doc} from 'firebase/firestore'
 import {db} from '../firebaseConfig/firebase'
-import { getDownloadURL, uploadBytes } from 'firebase/storage'
-import { Navbar } from "../components/Navbar";
-import { Hero } from "../components/Hero";
 import { Footer } from "../components/Footer";
 
 export const Edit = () => {
@@ -58,11 +55,9 @@ export const Edit = () => {
 
   return (
     <>
-    <Navbar/>
-    <Hero/> 
     <div className='container mb'>
       <div className="d-flex justify-content-end">
-          <button className="btn btn-primary" type='button' onClick={limpiarStorage}>LOGOUT</button>
+          <button className="btn btn-primary mt-2" type='button' onClick={limpiarStorage}>LOGOUT</button>
       </div>
       <div className="row">
         <div className="col">
@@ -130,7 +125,7 @@ export const Edit = () => {
 
             <button type='submit' className='btn btn-primary'>Update</button>
             <Link to='/admin'>
-              <button className='btn btn-danger'>
+              <button className='btn btn-danger mt-2 mb-2 m-2'>
                 Cancelar
               </button>
             </Link>
@@ -138,7 +133,7 @@ export const Edit = () => {
         </div>
       </div>
     </div>
-    <Footer/>S
+    <Footer/>
     </>
   )
 }

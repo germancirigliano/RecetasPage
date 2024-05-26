@@ -3,8 +3,6 @@ import { useParams, Link } from "react-router-dom"
 import { doc, getDoc} from "firebase/firestore"
 import {db} from "../firebaseConfig/firebase.js"
 import "../css/DetalleRecetas.css"
-import { Navbar } from "../components/Navbar";
-import { Hero } from "../components/Hero";
 import { Footer } from "../components/Footer";
 
 export const DetalleRecetas = () => {
@@ -27,8 +25,6 @@ export const DetalleRecetas = () => {
     }
     return(
         <>
-        <Navbar/>
-        <Hero/>  
         <Link className="d-flex justify-content-end" to="/admin">
             <button className="btn btn-primary" type='button'>ADMIN</button>
         </Link>

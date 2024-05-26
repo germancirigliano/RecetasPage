@@ -3,8 +3,6 @@ import {useNavigate,Link} from 'react-router-dom'
 import {getDownloadURL,ref as storageRef, uploadBytes} from 'firebase/storage'
 import {collection, addDoc} from 'firebase/firestore'
 import {db,storage} from '../firebaseConfig/firebase'
-import { Navbar } from "../components/Navbar";
-import { Hero } from "../components/Hero";
 import { Footer } from "../components/Footer";
 
 export const Create = ()=>{
@@ -92,11 +90,9 @@ const store = async(e) => {
 
   return (
     <>
-      <Navbar/>
-      <Hero/> 
       <div className="container mb">
         <div className="d-flex justify-content-end">
-          <button className="btn btn-primary" type='button' onClick={limpiarStorage}>LOGOUT</button>
+          <button className="btn btn-primary mt-2" type='button' onClick={limpiarStorage}>LOGOUT</button>
         </div>
         <div className='row'>
           <div className='col'>

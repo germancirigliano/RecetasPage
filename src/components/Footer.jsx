@@ -12,19 +12,14 @@ export const Footer = () => {
                     HOME
                 </Link>
             </li>
+            <li className="navbar__item">
+              <Link className="navbar__link" to="/recetas">
+                    RECETAS
+                </Link>
+            </li>
             <li>
               <Link className="navbar__link" to="/admin">
                     ADMIN
-              </Link>
-            </li>
-            <li className="navbar__item">
-              <Link className="navbar__link" to="/login">
-                    LOGIN
-              </Link>
-            </li>
-            <li className="navbar__item">
-              <Link className="navbar__link" to="/register">
-                    RESGISTRESE
               </Link>
             </li>
           </ul>

@@ -4,9 +4,7 @@ import {signInWithEmailAndPassword} from 'firebase/auth'
 import { useNavigate,Link } from "react-router-dom"
 import { AuthContext } from "../context/AuthContext"
 import "../css/Login.css"
-import { Navbar } from "../components/Navbar";
-import { Hero } from "../components/Hero";
-import { Footer } from "../components/Footer";
+import { FooterAdmin } from "../components/FooterAdmin";
 
 export const Login = () => {
   const [error, setError] = useState(false);
@@ -34,8 +32,6 @@ const {dispatch} = useContext(AuthContext)
 
   return (
     <>
-    <Navbar/>
-    <Hero/>  
     <div className="login">
       <form onSubmit={handleLogin}>
       <h1>ACCEDER A SU CUENTA</h1>
@@ -56,7 +52,7 @@ const {dispatch} = useContext(AuthContext)
         </Link>
       </form>
     </div>
-    <Footer/>
+    <FooterAdmin/>
     </>
   );
 };

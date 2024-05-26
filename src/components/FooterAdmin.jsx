@@ -12,6 +12,26 @@ export const FooterAdmin = () => {
                     HOME
                 </Link>
             </li>
+            <li className="navbar__item">
+              <Link className="navbar__link" to="/recetas">
+                    RECETAS
+                </Link>
+            </li>
+            <li>
+              <Link className="navbar__link" to="/admin">
+                    ADMIN
+              </Link>
+            </li>
+            <li className="navbar__item">
+              <Link className="navbar__link" to="/login">
+                    LOGIN
+              </Link>
+            </li>
+            <li className="navbar__item">
+              <Link className="navbar__link" to="/register">
+                    RESGISTER
+              </Link>
+            </li>
           </ul>
           <picture>
             <img
@@ -19,6 +39,7 @@ export const FooterAdmin = () => {
               alt="Logo de la Empresa"
             />
           </picture>
+
         </nav>
 
         <p className="footer__copy">All rights reserved 2024 &copy;</p>

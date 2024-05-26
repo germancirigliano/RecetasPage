@@ -3,9 +3,7 @@ import {auth} from '../firebaseConfig/firebase'
 import {createUserWithEmailAndPassword} from 'firebase/auth'
 import { useNavigate } from "react-router-dom"
 import "../css/Register.css"
-import { Navbar } from "../components/Navbar";
-import { Hero } from "../components/Hero";
-import { Footer } from "../components/Footer";
+import { FooterAdmin } from "../components/FooterAdmin";
 
 //SIN TERMINAR
 
@@ -33,8 +31,6 @@ export const Register = () => {
 
   return (
     <>
-    <Navbar/>
-    <Hero/>  
     <div className="register">
       <h1 >REGISTRAR USUARIO</h1>
       <form onSubmit={handleLogin}>
@@ -51,7 +47,7 @@ export const Register = () => {
         <button type="submit">Registrarse</button>
       </form>
     </div>
-    <Footer/>
+    <FooterAdmin/>
     </>
   );
 };

@@ -3,9 +3,7 @@ import {Link,useNavigate} from 'react-router-dom';
 import {collection, getDocs,  deleteDoc, doc} from 'firebase/firestore';
 import {db} from '../firebaseConfig/firebase';
 import "../css/Show.css"
-import { NavbarAdmin } from "./../components/NavbarAdmin";
-import { HeroAdmin } from "./../components/HeroAdmin";
-import { FooterAdmin } from "./../components/FooterAdmin";
+import { Footer } from "./../components/Footer";
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 
@@ -71,11 +69,9 @@ export const Show = () => {
 
     return (
         <>
-            <NavbarAdmin/>
-            <HeroAdmin/> 
             <div className="container">
                 <div className="d-flex justify-content-end">
-                <button className="btn btn-primary" type='button' onClick={limpiarStorage}>LOGOUT</button>
+                <button className="btn btn-primary mt-2" type='button' onClick={limpiarStorage}>LOGOUT</button>
                 </div>
                 <div className="col">
                     <div className="row">
@@ -136,7 +132,7 @@ export const Show = () => {
                     </div>
                 </div>
             </div>
-            <FooterAdmin/>
+            <Footer/>
         </>
     )
 }

@@ -30,7 +30,7 @@ export const Filters = ({ onFiltrosChange })=>{
         };
         setFiltros(updatedFilters);
         const searchParams = updateURLParams(location, updatedFilters);
-        navigate(`/?${searchParams.toString()}`);
+        navigate(`./?${searchParams.toString()}`);
     };
     
 

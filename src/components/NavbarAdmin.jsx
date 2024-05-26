@@ -13,7 +13,7 @@ export const NavbarAdmin = () => {
           
           <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item">
+              <li className="nav-item">
                 <Link className="nav-link active" to="/">
                   <img src={logo}  alt="logo" />
                 </Link>
