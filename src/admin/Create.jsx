@@ -19,8 +19,9 @@ const [instrucciones,setInstrucciones] = useState([''])
  const navigate = useNavigate();
 
   const limpiarStorage = () => {
-      localStorage.clear()
-      window.location.assign('/')
+        localStorage.clear()
+        navigate("/RecetasPage/")
+        window.location.reload()
     }
 
  const handleChangeIng = (index,value) =>{

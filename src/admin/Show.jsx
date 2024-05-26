@@ -13,9 +13,11 @@ const mySwal = withReactContent(Swal);
 
 export const Show = () => {
 
+    const navigate = useNavigate();
     const limpiarStorage = () => {
         localStorage.clear()
-        window.location.assign('/')
+        navigate("/RecetasPage/")
+        window.location.reload()
     }
 
     //1 configurar useState (HOOK)

@@ -21,8 +21,9 @@ export const Edit = () => {
   const {recetaId} = useParams()
 
   const limpiarStorage = () => {
-      localStorage.clear()
-      window.location.assign('/')
+        localStorage.clear()
+        navigate("/RecetasPage/")
+        window.location.reload()
     }
 
   const update = async(e) => {
