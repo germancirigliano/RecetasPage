@@ -4,7 +4,7 @@ import "../css/LandingPage.css"
 import { Navbar } from "../components/Navbar";
 import { Hero } from "../components/Hero";
 import { Footer } from "../components/Footer";
-import { RecetasNuevas } from "../components/RecetasNuevas"
+// import { RecetasNuevas } from "../components/RecetasNuevas"
 
 export const LandingPage = () => {
     return(
