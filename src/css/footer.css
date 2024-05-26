@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Raleway:wght@400;500;700&family=Roboto:wght@900&display=swap');
+
+.footer{
+    margin-top: 2rem;
+    background-color: #30343F;
+    color: whitesmoke;
+    padding: 3rem;
+}
+
+.footer__copy{
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    margin-top: 3.6rem;
+    color: whitesmoke;
+    font-size: 2rem;
+    font-weight: 500;
+}
